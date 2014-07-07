@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.min.css"> 
+        <script src="js/libs/jquery/jquery.min.js"></script>
+        <script src="js/libs/jquery-mobile/jquery.mobile.min.js"></script>
+        <script src="js/index.js"></script>
+        <title>ECO-ENERGY</title>
+    </head>
+    <body>
+        <div id="evaluate" data-role="page">
+            <div data-role="header" data-position="fixed">
+                <h1>ECO-ENERGY</h1>
+            </div>
+            <div id="mainevaluate" data-role="content">
+                <form action="#" id="evaluationForm" method="post">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>MR16 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="mr16" id="nb_mr16" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>GU10 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="gu10" id="nb_gu10" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>GY 6.35 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="gy635" id="nb_gy635" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 0.6m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube6" id="nb_tube6" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 1.2m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube12" id="nb_tube12" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 1.5m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube15" id="nb_tube15" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Carré 1 spot :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="carre1" id="nb_carre1" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rectangle 2 spots :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangle2" id="nb_rectangle2" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rectangle 3 spots :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangle3" id="nb_rectangle3" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rond Downlight :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="ronddown" id="nb_ronddown" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>rectangle Downlight :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangledown" id="nb_rectangledown" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Projecteur R7S :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="r7s" id="nb_r7s" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Dalle encastrée :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="dalle" id="nb_dalle" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Globe / Applique :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="globe" id="nb_globe" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Ampoule 60-75W :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="ampoule75" id="nb_ampoule75" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Ampoule 100-120W :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="ampoule100" id="nb_ampoule100" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Cloche industrielle :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="cloche" id="nb_cloche" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Projecteur Tunnel :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tunnel" id="nb_tunnel" value=""/>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input id="submit" type="submit" value="Calculer les économies"/>
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h3>
+                    © LEEWAY 2014
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+    <div id="evaluate" data-role="page">
+            <div data-role="header" data-position="fixed">
+                <h1>ECO-ENERGY</h1>
+            </div>
+            <div id="mainevaluate" data-role="content">
+                <form action="#" id="evaluationForm" method="post">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>MR16 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="mr16" id="nb_mr16" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>GU10 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="gu10" id="nb_gu10" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>GY 6.35 :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="gy635" id="nb_gy635" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 0.6m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube6" id="nb_tube6" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 1.2m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube12" id="nb_tube12" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Tube 1.5m :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="tube15" id="nb_tube15" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Carré 1 spot :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="carre1" id="nb_carre1" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rectangle 2 spots :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangle2" id="nb_rectangle2" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rectangle 3 spots :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangle3" id="nb_rectangle3" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Rond Downlight :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="ronddown" id="nb_ronddown" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>rectangle Downlight :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="rectangledown" id="nb_rectangledown" value=""/>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label>Projecteur R7S :</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="number" data-mini="true" name="r7s" id="nb_r7s" value=""/>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <input id="submit" type="submit" value="Calculer les économies"/>
+                    </div>
+                </form>
+            </div>
+            <div data-role="footer">
+                <h3>
+                    © LEEWAY 2014
+                </h3>
+            </div>
+        </div>
+        
+        
+        <script type="text/javascript">
+            $(document).on('pageinit', '#evaluate', function(){
+                $(document).on('click', '#submit', function(){
+                    var mr16 = $("#nb_mr16").val();
+                    var gu10 = $("#nb_gu10").val();
+                    var gy635 = $("#nb_gy635").val();
+                    var tube6 = $("#nb_tube6").val();
+                    var tube12 = $("#nb_tube12").val();
+                    var tube15 = $("#nb_tube15").val();
+                    var carre1 = $("#nb_carre1").val();
+                    var rectangle2 = $("#nb_rectangle2").val();
+                    var rectangle3 = $("#nb_rectangle3").val();
+                    var ronddown = $("#nb_ronddown").val();
+                    var rectangledown = $("#nb_rectangledown").val();
+                    var r7s = $("#nb_r7s").val();
+                    
+                    var total_energy = (mr16*50) + (gu10*50) + (gy635*25) + (tube6*23) + (tube12*45) + (tube15*73) + (carre1*100) + (rectangle2*200) + (rectangle3*300) + (ronddown*52) + (rectangledown*150) + (r7s*300);
+                    var led_energy = (mr16*4.5) + (gu10*4.5) + (gy635*4.9) + (tube6*10) + (tube12*20) + (tube15*25) + (carre1*20) + (rectangle2*38) + (rectangle3*58) + (ronddown*18) + (rectangledown*12) + (r7s*30);
+                    var economy_energy = ((total_energy - led_energy) * 300 * 10 )/1000;
+                    var economy = (economy_energy * 0.11);
+                    alert('Economie de  : '+economy_energy+' KWH / an\n\n Economie totale de '+economy+'€ \ an');
+                    
+                    
+                    
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>
